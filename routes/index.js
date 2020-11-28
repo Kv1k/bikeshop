@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const stripe = require('stripe')('sk_test_51HXkvcH9vDpwaqScloRIOos56oVK0aBBnMYEqCcS9mubM2MLl1HMaC00jUaRR3QRYZpebVQYt1Df1Hu3aPrSaWVB00Ytqapzwx');
+require('dotenv').config()
+
+const stripe = require('stripe')(`${process.env.stripeTest}`);
 
 let fraisPort=30;
 let total = 0;
